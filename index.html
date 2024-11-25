@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1 class="mt-5 mb-5">Bookmarker</h1>
+      <div class="dots"></div>
+      <span class="title">
+        <h2 class="mx-auto mt-4 mb-5">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+      </span>
+
+      <div class="mx-4">
+        <div class="mb-4">
+          <label for="inputname" class="form-label"
+            ><i class="fa-solid fa-book-bookmark me-2"></i> Site Name
+            <span class="not_valid" id="notvalid2"> </span>
+            <span class="valid" id="valid2"> </span>
+          </label>
+          <input
+            oninput="checkValidationName ()"
+            type="text"
+            id="inputname"
+            class="form-control"
+            placeholder="Bookmark Name"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="inputurl" class="form-label"
+            ><i class="fa-solid fa-link"></i> Site URL
+            <span class="not_valid" id="notvalid"> </span>
+            <span class="valid" id="valid"> </span>
+          </label>
+          <input
+            oninput="checkValidationUrl ()"
+            type="url"
+            id="inputurl"
+            class="form-control"
+            placeholder="Website URL"
+          />
+        </div>
+        <div class="mb-4">
+          <button
+            onclick="addElements()"
+            type="button"
+            class="button1 px-5 btn position-relative start-50 translate-middle-x"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="dots mb-4"></div>
+      <!---------------------------------------------------------------->
+
+      <div class="table_title">
+        <div class="row mx-auto">
+          <h3 class="col-3">index</h3>
+          <h3 class="col-3">website name</h3>
+          <h3 class="col-3">visit</h3>
+          <h3 class="col-3">delete</h3>
+        </div>
+      </div>
+
+      <!-------------------->
+      <div id="Bookmarkresult"></div>
+
+      <!---------------------------------------------------------------->
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
